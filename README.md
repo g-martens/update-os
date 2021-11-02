@@ -5,5 +5,12 @@ You can create this user as ansible user by executing the following command:
 ansible-playbook create-ansible-user.yml -u root -K
 ```
 
-# Inventory
-
+# Usage
+## Inventory
+The make this ansible script work, you need to add the servers on the inventory files
+inventorys/redhat
+inventorys/ubuntu
+inventorys/windows
+```bash
+ansible-playbook -i inventorys/redhat/nodes.yml site.yml 
+```
