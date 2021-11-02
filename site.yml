@@ -1,0 +1,21 @@
+---
+# Redhat/ CENTOS servers
+- hosts: 
+  roles:
+    - rhel
+  when: ansible_os_family == "Redhat"
+
+# Ubuntu
+- hosts:
+  roles:
+    - ubuntu
+  when: ansible_os_family == "Debian"
+
+# Windows
+- hosts:
+  roles:
+    - Windows
+  when: ansible_os_family == "Windows"
+
+
+
